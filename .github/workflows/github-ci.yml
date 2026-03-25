@@ -5,8 +5,13 @@ name: github pipeline
 # TODO-STEP 2: Define the Trigger Events
 # Uncomment the following lines to trigger the workflow on push and pull request events
 on:
- push:
- pull_request:
+  push:
+    paths:
+      - '**.py'
+  pull_request:
+    paths:
+      - '**.py'
+  workflow_dispatch:
 
 jobs:
   # Build job
